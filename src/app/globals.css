@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #fbf9f4;
+    color: #1b1c19;
+  }
+
+  ::selection {
+    background-color: #e3beb8;
+    color: #271310;
+  }
+}
+
+@layer components {
+  .ambient-shadow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .ambient-shadow:hover {
+    box-shadow: 0 24px 48px -12px rgba(62, 39, 35, 0.08);
+  }
+
+  .header-scrolled {
+    @apply shadow-sm;
+  }
+}
